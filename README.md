@@ -1,0 +1,2 @@
+# enumjs
+Javascript enum types
