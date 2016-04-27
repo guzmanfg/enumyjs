@@ -1,0 +1,32 @@
+{
+  "name": "enumjs",
+  "version": "0.1.0",
+  "description": "Javascript enum types",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guzmanfg/enumjs"
+  },
+  "keywords": [
+    "javascript",
+    "enum",
+    "type",
+    "flag"
+  ],
+  "author": "Guzmán Fernández García",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guzmanfg/enumjs/issues"
+  },
+  "homepage": "https://github.com/guzmanfg/enumjs",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
