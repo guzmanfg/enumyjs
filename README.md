@@ -1,28 +1,6 @@
-# Enum JS
+# EnumyJS
 
-Enum JS is a library to work with enum types easily in javascript.
-
-## Installing
-
-With NPM
-
-```
-npm install enumjs
-```
-
-With Bower
-
-```
-bower install enumjs
-```
-
-## How to use it
-
-```
-var enum = require('enum');
-var MyEnum = enum.build(['RED', 'GREEN', 'BLUE']);
-var myEnumInstance = new MyEnum(MyEnum.RED);
-```
+EnumyJS is a library to work with enum types easily in javascript.
 
 ## Roadmap
 

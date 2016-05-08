@@ -1,5 +1,5 @@
 {
-  "name": "enum-js",
+  "name": "enumyjs",
   "version": "0.1.0",
   "description": "Javascript enum types",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guzmanfg/enumjs.git"
+    "url": "git+https://github.com/guzmanfg/enumyjs.git"
   },
   "keywords": [
     "javascript",
@@ -22,14 +22,11 @@
   "author": "Guzmán Fernández García <guzman.fg@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guzmanfg/enum-js/issues"
+    "url": "https://github.com/guzmanfg/enumyjs/issues"
   },
-  "homepage": "https://github.com/guzmanfg/enum-js",
+  "homepage": "https://github.com/guzmanfg/enumyjs",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
-  },
-  "dependencies": {
-    "chai": "3.5.0"
   }
 }
