@@ -1,6 +1,6 @@
 /*global require, describe, it */
 var expect = require('chai').expect;
-var Flag = require('../src/flag');
+var Flag = require('../src/index').Flag;
 
 describe('Flag', function() {
     "use strict";
@@ -34,6 +34,18 @@ describe('Flag', function() {
             var permissions = new Permissions(Permissions.DELETE, Permissions.INSERT, Permissions.SELECT, Permissions.UPDATE, Permissions.VIEW_DEFINITION);
             expect(permissions).to.be.a('object');
             expect(permissions).to.have.property('value').and.equals(31);
+        });
+
+        it('should add delete permission value to a Permissions instance', function(){
+            var permissions = new Permissions(Permissions.INSERT, Permissions.SELECT, Permissions.UPDATE, Permissions.VIEW_DEFINITION);
+            permissions.add(Permissions.DELETE);
+            expect(permissions).to.have.property('value').and.equals(31);
+        });
+
+        it('should remove delete permission value from a Permissions instance', function(){
+            var permissions = new Permissions(Permissions.DELETE, Permissions.INSERT, Permissions.SELECT, Permissions.UPDATE, Permissions.VIEW_DEFINITION);
+            permissions.remove(Permissions.DELETE);
+            expect(permissions).to.have.property('value').and.equals(30);
         });
     })
 

@@ -12,10 +12,10 @@ function EnumBuilder(params) {
     var names = params.names || [];
     this._values = {};
     this._index = 0;
-    this._getNextValue = params.generator || function(index) {
+    this._generator = params.generator || function(index) {
             return index;
         };
-    this._setValue = params.setValue || function(Enum, value){
+    this._setValue = params.setValue || function(Enum, value) {
             return value || 0;
         };
 
@@ -29,7 +29,7 @@ EnumBuilder.prototype = {
      * @private
      */
     _addValue: function(name) {
-        this._values[name] = this._getNextValue(this._index++);
+        this._values[name] = this._generator(this._index++);
     },
 
     /**
@@ -81,14 +81,21 @@ EnumBuilder.prototype = {
 
     /**
      * Enum builder.
-     * @returns {function} Enum class definition.
+     * @returns {function} Enum class constructor.
      * @private
      */
     _create: function() {
         var values = this.getValues();
         var setValue = this._setValue;
+
+        /**
+         * @class Enum
+         */
         return function() {
             var params = [].slice.call(arguments, 0);
+            /**
+             * Value of enum
+             */
             this.value = setValue.apply(this, [values].concat(params));
         };
     }

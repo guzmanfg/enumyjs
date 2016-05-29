@@ -1,6 +1,6 @@
 /*global require, describe, it */
 var expect = require('chai').expect;
-var Enum = require('../src/enum');
+var Enum = require('../src/index').Enum;
 
 describe('Enum', function() {
     "use strict";
